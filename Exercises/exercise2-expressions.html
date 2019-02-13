@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body>
+
+<div ng-app="" ng-init="myCol='lightblue';quantity=1;cost=5; points=[1,15,19,2,40]">
+
+	<input style="background-color:{{myCol}}" ng-model="myCol" value="{{myCol}}">
+
+	<p>Total in dollar: <span ng-bind="quantity * cost"></span></p>
+
+	<p>The third result in the array is {{ points[2] }}</p>
+
+</div>
+
+</body>
+</html>

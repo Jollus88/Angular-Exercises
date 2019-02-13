@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+<style>
+	input.ng-invalid{
+		background-color:lightblue;
+	}
+</style>
+
+<body>
+
+<!-- Angular email validation -->
+<form ng-app="" name="myForm">
+	Email:
+	<input type="email" name="myAddress" ng-model="text">
+	<span ng-show="myForm.myAddress.$error.email">Not a valid email address!</span>
+
+	Enter your name:
+	<input name="myName" ng-model="myText" required>
+</form>
+
+<!--
+	The ng-model directive adds/removes the following classes, according to the status of the form field:
+		ng-empty
+		ng-not-empty
+		ng-touched
+		ng-untouched
+		ng-valid
+		ng-invalid
+		ng-dirty
+		ng-pending
+		ng-pristine
+-->
+
+<script>
+
+	/*var app = angular.module("myApp", []);
+	app.directive("w3TestDirective", function(){
+		return{
+			restrict: "A",
+			template: "<h1>Made by a directive!</h1>"
+		};
+	});*/
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- 
+While it is common in HTML applications to place scripts at the end of the <body> element, it is recommended that you load the AngularJS library either in the <head> or at the start of the <body>.
+
+This is because calls to angular.module can only be compiled after the library has been loaded.
+-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body>
+
+<!--<div ng-app="myApp" ng-controller="myCtrl">
+	{{ firstName + " " + lastName }}
+</div>
+
+<div ng-app="myApp2" w3-test-directive></div>-->
+
+<!-- combined above -->
+<div ng-app="myApp" ng-controller="myCtrl" w3-test-directive>
+	{{ firstName + " " + lastName }}
+</div>
+
+<script>
+
+	var app = angular.module("myApp", []);
+	//var app2 = angular.module("myApp2", []);
+
+	app.controller("myCtrl", function($scope){
+		$scope.firstName = "John";
+		$scope.lastName = "Doe";
+	});
+
+	// When naming a directive, you must use a camel case name, w3TestDirective, but when invoking it, you must use - separated name, w3-test-directive:
+	/*app.directive('w3TestDirective', function(){
+		return{
+			template: 'I was made in a directive constructor!'
+		};
+	});*/
+
+</script>
+
+</body>
+</html>

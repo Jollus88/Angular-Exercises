@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+<body>
+
+	<div ng-app="">
+		<form name="myForm">
+			<input name="myInput" ng-model="myInput" required>
+			<input name="emailInput" ng-model="emailInput" type="email">
+		</form>
+
+		<p>The input's valid state is:</p>
+		<h1>{{ myForm.myInput.$valid }}</h1><br><br>
+
+		<p>The email is <strong>{{ myForm.emailInput.$valid }}</strong></p>
+	</div><br>
+
+
+	<!--Show an error message if the field has been touched AND is empty:
+
+	<input name="myName" ng-model="myName" required>
+	<span ng-show="myForm.myName.$touched && myForm.myName.$invalid">The name is required.</span>-->
+
+
+
+<script>
+	//angular.module('myApp', []).controller('formCtrl', function($scope){
+	//});
+</script>
+
+</body>
+</html>
